@@ -1,0 +1,30 @@
+﻿<Window x:Class="Prakt3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakt3"
+        mc:Ignorable="d"
+        Title="Практ. №3" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Очистить" x:Name="ClearArr" Click="ClearArr_Click"/>
+                <MenuItem Header="Загрузить" x:Name="UploadArr" Click="UploadArr_Click"/>
+                <MenuItem Header="Сохранить" x:Name="SaveArr" Click="SaveArr_Click"/>
+                <MenuItem Header="Выход" x:Name="CloseApp" Click="CloseApp_Click"/>
+            </MenuItem>
+            <MenuItem Header="Помощь">
+                <MenuItem Header="Задание" x:Name="AppTask" Click="AppTask_Click"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid Margin="0,18,0,199" IsReadOnly="True" x:Name="NumbersApp"/>
+        <TextBox HorizontalAlignment="Left" Margin="250,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="rowsCount" TextChanged="columnsCount_TextChanged"/>
+        <Label Content="Кол-во строк" HorizontalAlignment="Left" Margin="269,240,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="405,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="columnsCount" TextChanged="columnsCount_TextChanged"/>
+        <Label Content="Кол-во столбцов" HorizontalAlignment="Left" Margin="413,240,0,0" VerticalAlignment="Top"/>
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Margin="330,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="ResultBox"/>
+        <Label Content="Результат" HorizontalAlignment="Left" Margin="359,306,0,0" VerticalAlignment="Top"/>
+        <Button Content="Вычислить" HorizontalAlignment="Left" Margin="330,374,0,0" VerticalAlignment="Top" Width="120" x:Name="resButton" Click="resButton_Click"/>
+    </Grid>
+</Window>
